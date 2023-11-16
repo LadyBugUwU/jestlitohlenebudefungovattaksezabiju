@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registrace</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <h1>Registrace</h1>
+
+    <label for="nick">Přezdívka osoby (2-20 znaků, čísla a písmena bez mezer):</label>
+    <input type="text" name="nick" id="nick" required pattern="[a-zA-Z0-9]{2,20}">
+    <br>
+    <label for="je_plavec">Zda-li osoba umí plavat:</label>
+    <input type="radio" name="je_plavec" value="1" required> Ano
+    <input type="radio" name="je_plavec" value="0" required> Ne
+    <br>
+
+    <label for="kanoe_kamarad">S kým by osoba chtěla být na lodi:</label>
+    <select name="kanoe_kamarad" id="kanoe_kamarad">
+
+    </select>
+
+
+  <br>
+    <br>
+    <button id="my-button" onclick="submitForm()">Zaregistrovat</button>
+
+    <a href="/">Storno</a>
+
+
+  <script src="/public/script.js" defer></script>
+
+  <script>
+    // Zavolání metody vypis() po načtení stránky
+    document.addEventListener('DOMContentLoaded', function() {
+      selectKamarada(); 
+    });
+  </script>
+
+</body>
+</html>
